@@ -1,3 +1,7 @@
+* {
+   margin: 0;
+   padding: 0;
+}
 /* Define the rem display value one rem = 12 pixels */
 html {
    font-size: 62.5%;
@@ -5,34 +9,44 @@ html {
 
 /* Base line setting */
 body {
-   margin: 0;
-   padding: 0;
    display: flex;
-   justify-content: center;
+   flex-direction: column;
+   align-items: center;
    font-family: "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-   font-size: 1.5rem;
+   font-size: 1.3rem;
    letter-spacing: 2px;
    line-height: 160%;
 }
 
-/* Main container for the full page, all content must belong inside container block */
-.container {
-   width: 80%;
+header {
+   width: 100%;
 }
+
+.top {
+   display: flex;
+   justify-content: center;
+   padding: 1px;
+   margin-bottom: 5rem;
+   box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.2);
+}
+
+/* Header */
+
+
 
 /*****************************************************************
         Begining of Header Block
 ******************************************************************/
-header {
-   margin-bottom: 5rem;
-}
 
 /* Navigation bar */
 .navbar {
-   height: 6rem;
+   margin: 1px;
    display: flex;
-   justify-content: space-between;
+   flex-direction: row;
    align-items: center;
+   justify-content:space-between;
+   width: 80%;
+   height: 4rem;
 }
 
 .navbar_logo {
@@ -47,7 +61,6 @@ header {
 
 a.navbar_link,
 a.navbar_link:visited {
-   display: inline-block;
    text-decoration: none;
    color: #575757;
 }
@@ -58,10 +71,23 @@ a.navbar_link:active {
    color: #949292;
 }
 
+/* Main container for the full page, all content must belong inside container block */
+section {
+   width: 80%;
+   margin: auto;
+}
+
+.content {
+   width: 100%;
+}
 /* h1 heading */
 h1 {
    text-transform: uppercase;
    font-size: 2rem;
+}
+
+h2, h3, h4 {
+   margin: 0;
 }
 
 /***************************************************************
@@ -79,22 +105,60 @@ h1 {
    width: 100%;
    border-radius: 10px;
    background-color: #fcfcfc;
+   margin-bottom: 5rem;
    /* background-color: #949292; */
    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 
 .list_col {
+   min-width: 20rem;
    margin: 2rem;
    padding: 1rem;
    width: 30%;
    border-radius: 10px;
    background-color: white;
+   text-align: left;
 }
 
 .info_col {
+   min-width: 30rem;
    margin: 2rem 2rem 2rem 0;
    padding: 1rem;
    width: 70%;
    border-radius: 10px;
    background-color: white;
+}
+
+.search_feild {
+   display: flex;
+   flex-direction: row;
+   width: 100%;
+   margin-bottom: 2rem;
+   justify-content:space-between;
+}
+
+.search_input {
+   width: 100%;
+   height: 3rem;
+   border-style: none;
+   border-radius: 20px;
+   padding: 0 5px 0 5px;
+   border: 1px solid;
+   border-color: #c0c0c0;
+}
+
+.search_button {
+   height: 3rem;
+   width: 10rem;
+   margin-left: 1rem;
+   background-color: #0066ff;
+   font-size: 15px;
+   color: #ffffff;
+   border-radius: 20px;
+   border-style: none;
+}
+
+.name_list {
+   display: flex;
+   flex-direction: column;
 }
