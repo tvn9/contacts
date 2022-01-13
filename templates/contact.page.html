@@ -1,82 +1,53 @@
-<!DOCTYPE html>
-<html lang="en">
+{{template "index_html_header" .}}
 
-   <head>
-      <meta charset="UTF-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="stylesheet" href="../assets/css/styles.css">
-      <title>Contacts</title>
-   </head>
+{{template "index_navbar_header" .}}
 
-   <body>
-      <header>
-         <nav>
-            <div class="top">
-               <div class="navbar">
-                  <div class="navbar_logo">
-                     <a class="navbar_link" href="index.page.html">Logo</a>
-                  </div>
-                  <div class="navbar_links">
-                     <ul>
-                        <li class="navbar_li"><a class="navbar_link" href="about.page.html">About</a></li>
-                        <li class="navbar_li"><a class="navbar_link" href="contact.page.html">Contacts</a></li>
-                        <li class="navbar_li"><a class="navbar_link" href="login.page.html">Login</a></li>
-                        <li class="navbar_li"><a class="navbar_link" href="signup.page.html">Sign Up</a></li>
-                     </ul>
-                  </div>
-               </div>
+{{define "contact_page"}}
+<div class="content">
+   <section>
+      <div class="contacts_view">
+         <div class="list_col">
+            <div class="search_feild">
+               <input class="search_input" type="text" id="search" nane="contact_search" placeholder="search">
+               <button class="search_button">Search</button>
             </div>
-         </nav>
-      </header>
-
-      <div class="content">
-         <section>
-            <div class="contacts_view">
-               <div class="list_col">
-                  <div class="search_feild">
-                     <input class="search_input" type="text" id="search" nane="contact_search" placeholder="search">
-                     <button class="search_button">Search</button>
-                  </div>
-                  <div class=name_list>
-                     <h2>Contact List</h2>
-                     <div><img src="." alt=""><span>Firstname Lastname</span></div>
-                     <div><span>Firstname Lastname</span></div>
-                     <div><span>Firstname Lastname</span></div>
-                     <div><span>Firstname Lastname</span></div>
-                     <div><span>Firstname Lastname</span></div>
-                     <div><span>Firstname Lastname</span></div>
-                     <div><span>Firstname Lastname</span></div>
-                     <div><span>Firstname Lastname</span></div>
-                     <div><span>Firstname Lastname</span></div>
-                     <div><span>Firstname Lastname</span></div>
-                     <div><span>Firstname Lastname</span></div>
-                  </div>
-               </div>
-               <div class="info_col">
-                  <div><img sir="." alt=""><span>FirstName LastName</span></div>
-                  <div>
-                     icons1, icon2, icom3
-                  </div>
-                  <div>Phone Number: 1-555-555-1212</div>
-                  <div>Email: me@emailserver.com</div>
-                  <div>note</div>
-               </div>
+            <div class=name_list>
+               <h2>Contact List</h2>
+               <div><img src="." alt=""><span>Firstname Lastname</span></div>
+               <div><span>Firstname Lastname</span></div>
+               <div><span>Firstname Lastname</span></div>
+               <div><span>Firstname Lastname</span></div>
+               <div><span>Firstname Lastname</span></div>
+               <div><span>Firstname Lastname</span></div>
+               <div><span>Firstname Lastname</span></div>
+               <div><span>Firstname Lastname</span></div>
+               <div><span>Firstname Lastname</span></div>
+               <div><span>Firstname Lastname</span></div>
+               <div><span>Firstname Lastname</span></div>
             </div>
-         </section>
-         <section>
-            <h1>Contact Page</h1>
-            <p>
-               Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate consectetur autem nihil possimus, accusamus incidunt ipsa molestias qui, architecto mollitia vel voluptate ab obcaecati maxime sed sapiente culpa aut laboriosam.
-               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro vitae beatae optio debitis delectus unde mollitia inventore dicta dolore vel corporis cupiditate sit, quia ratione accusantium incidunt, odio laborum numquam.
-               <br>
-               Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi iusto quas, inventore perferendis nesciunt odit exercitationem nulla, deserunt id at quae veniam quis ipsum, asperiores nisi molestiae quod incidunt doloribus.
-               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus harum nesciunt laborum quasi officia? Ipsa veritatis aperiam deleniti suscipit! Nisi soluta illo alias odit, eius error voluptate velit fugiat quos.
-            </p>
-         </section>
-
-
+         </div>
+         <div class="info_col">
+            <div><img sir="." alt=""><span>FirstName LastName</span></div>
+            <div>
+               icons1, icon2, icom3
+            </div>
+            <div>Phone Number: 1-555-555-1212</div>
+            <div>Email: me@emailserver.com</div>
+            <div>note</div>
+         </div>
       </div>
-   </body>
+   </section>
+   <section>
+      <h1>Contact Page</h1>
+      <p>
+         Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate consectetur autem nihil possimus, accusamus incidunt ipsa molestias qui, architecto mollitia vel voluptate ab obcaecati maxime sed sapiente culpa aut laboriosam.<br>
+         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro vitae beatae optio debitis delectus unde mollitia inventore dicta dolore vel corporis cupiditate sit, quia ratione accusantium incidunt, odio laborum numquam.
+         <br>
+         Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi iusto quas, inventore perferendis nesciunt odit exercitationem nulla, deserunt id at quae veniam quis ipsum, asperiores nisi molestiae quod incidunt doloribus.
+         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus harum nesciunt laborum quasi officia? Ipsa veritatis aperiam deleniti suscipit! Nisi soluta illo alias odit, eius error voluptate velit fugiat quos.
+      </p>
+   </section>
+</div>
+{{end}}
 
-</html>
+{{template "index_html_footer" .}}

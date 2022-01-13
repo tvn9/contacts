@@ -1,17 +1,21 @@
-{{define "indexhtmltop"}}
+{{define "index_html_header"}}
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-      <meta charset="UTF-8" />
-      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="./assets/css/styles.css">
-      <title>Document</title>
-   </head>
-   <body>
-{{end}} 
 
-{{define "indexhtmlbottom"}}	
-	</body>
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      {{template "index_css" .}}
+      <title>Contacts</title>
+   </head>
+
+   <body>
+      {{end}}
+      
+
+      {{defind "index_html_footer"}}
+   </body>
+
 </html>
 {{end}}
