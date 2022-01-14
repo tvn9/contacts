@@ -3,6 +3,8 @@ package main
 import (
 	"net/http"
 	"text/template"
+
+	"github.com/gorilla/mux"
 )
 
 var tmpl *template.Template
@@ -14,31 +16,30 @@ func init() {
 
 // main is the entry point of the
 func main() {
-
+	// define gorilla mux
+	r := mux.NewRouter()
 	// static file server
 	fs := http.FileServer(http.Dir("assets/"))
-	http.Handle("/assets/", http.StripPrefix("/assets", fs))
-
-	// define gorilla mux
-	// r := mux.NewRouter()
+	// http.Handle("/assets/", http.StripPrefix("/assets", fs))
+	r.PathPrefix("/assets/").Handler(http.StripPrefix("/assets", fs))
 
 	//
-	http.HandleFunc("/", HomeHandler)
+	r.HandleFunc("/", HomeHandler)
 
 	//
-	http.HandleFunc("/about", AboutHandler)
+	r.HandleFunc("/about", AboutHandler)
 
 	//
-	http.HandleFunc("/contact", ContactsHander)
+	r.HandleFunc("/contact", ContactsHander)
 
 	//
-	http.HandleFunc("/login", LoginHandler)
+	r.HandleFunc("/login", LoginHandler)
 
 	//
-	http.HandleFunc("/signup", SignupHandler)
+	r.HandleFunc("/signup", SignupHandler)
 
 	// start server
-	http.ListenAndServe(":9090", nil)
+	http.ListenAndServe(":9090", r)
 }
 
 // HomeHandler
